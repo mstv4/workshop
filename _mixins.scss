@@ -1,0 +1,36 @@
+@mixin mediaScreen() {
+  @media screen and (max-width: 1599px) {
+    width: var(--medium-l-width);
+  }
+
+  @media screen and (max-width: 1439px) {
+    width: var(--medium-width);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: var(--small-width);
+  }
+}
+
+@mixin linkHelpMe ($color, $background, $box-shadow, $margin-top) {
+    color: var(--link-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    background: var(--main-color);
+    box-shadow: 0px 16px 30px rgba(50, 175, 100, 0.15);
+    border-radius: 35px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: var(--large-padding);
+    padding-right: var(--large-padding);
+    text-decoration: none;
+    opacity: 1;
+    margin-top: var(--medium-margin);
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+}
