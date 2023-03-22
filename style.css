@@ -6,12 +6,13 @@
   --bg-form-color: #9fdea9;
   --link-color: #6cb981;
   --border-submit-color: #4db96b;
-  --mainblock-text-color: #0d4d14;
+  --mainblock-text-color: #0d4e15;
   --bg-footer-color: #324b29;
   --bg-link-gradient: radial-gradient(
     50% 50% at 50% 50%,
     #ffffff 0%,
-    #f9f9f9 100%);
+    #f9f9f9 100%
+  );
   /* margins */
   --small-margin: 30px;
   --medium-margin: 50px;
@@ -32,20 +33,14 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: "Poppins";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 .headerdiv {
@@ -60,8 +55,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-image: url("../assets/bg_header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   color: var(--main-color);
-  width: var(--max-width);
   height: 840px;
 }
 .headerdiv ul {
@@ -149,13 +146,14 @@ body {
   padding-left: var(--large-padding);
   padding-right: var(--large-padding);
   text-decoration: none;
-  opacity: 1;
   margin-top: var(--medium-margin);
 }
 .headerdiv .link:hover {
   cursor: pointer;
   text-decoration: underline;
-  opacity: 0.9;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(77, 185, 107)), to(rgb(13, 78, 21)));
+  background: linear-gradient(0deg, rgb(77, 185, 107) 0%, rgb(13, 78, 21) 100%);
+  color: white;
 }
 @media screen and (max-width: 1599px) {
   .headerdiv {
@@ -184,7 +182,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--max-width);
+  width: 100%;
   height: 1056px;
 }
 .maindiv .maindivtitle1 {
@@ -235,13 +233,14 @@ body {
   padding-left: var(--large-padding);
   padding-right: var(--large-padding);
   text-decoration: none;
-  opacity: 1;
   margin-top: var(--medium-margin);
 }
 .maindiv .linkservices:hover {
   cursor: pointer;
   text-decoration: underline;
-  opacity: 0.9;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(77, 185, 107)), to(rgb(13, 78, 21)));
+  background: linear-gradient(0deg, rgb(77, 185, 107) 0%, rgb(13, 78, 21) 100%);
+  color: white;
 }
 .maindiv .sectionservices {
   display: -webkit-box;
@@ -269,10 +268,16 @@ body {
 }
 .maindiv .sectionservices .mainsection__block {
   height: 504px;
+  width: 385px;
   background: var(--main-color);
   -webkit-box-shadow: 0px 10px 30px rgba(16, 51, 30, 0.1);
           box-shadow: 0px 10px 30px rgba(16, 51, 30, 0.1);
   border-radius: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .maindiv .sectionservices .mainsection__block {
+    width: 250px;
+  }
 }
 .maindiv .sectionservices .mainsection__block img {
   width: 385px;
@@ -328,7 +333,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-image: url("../assets/bg_body.png");
-  width: var(--max-width);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 732px;
 }
 .secondarydiv .sectionaboutus {
@@ -384,13 +391,14 @@ body {
   padding-left: var(--large-padding);
   padding-right: var(--large-padding);
   text-decoration: none;
-  opacity: 1;
   margin-top: var(--medium-margin);
 }
 .secondarydiv .linkaboutus:hover {
   cursor: pointer;
   text-decoration: underline;
-  opacity: 0.9;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(77, 185, 107)), to(rgb(13, 78, 21)));
+  background: linear-gradient(0deg, rgb(77, 185, 107) 0%, rgb(13, 78, 21) 100%);
+  color: white;
 }
 @media screen and (max-width: 1599px) {
   .secondarydiv {
@@ -410,7 +418,7 @@ body {
 
 .thirddiv {
   height: 797px;
-  width: var(--max-width);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,7 +521,7 @@ body {
 }
 
 .fourdiv {
-  width: var(--max-width);
+  width: 100%;
   height: 532px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -563,6 +571,10 @@ body {
 .fourdiv .fourdivgrid .submit:hover {
   cursor: pointer;
   text-decoration: underline;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(77, 185, 107)), to(rgb(13, 78, 21)));
+  background: linear-gradient(0deg, rgb(77, 185, 107) 0%, rgb(13, 78, 21) 100%);
+  color: white;
+  border: 0px;
 }
 .fourdiv .fourdivgrid ul {
   font-size: 14px;
@@ -604,9 +616,11 @@ body {
 }
 
 .bgfooter {
-  width: var(--max-width);
   height: 145px;
   background: var(--bg-footer-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 @media screen and (max-width: 1599px) {
   .bgfooter {

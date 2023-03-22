@@ -12,25 +12,29 @@
   }
 }
 
-@mixin linkHelpMe ($color, $background, $box-shadow, $margin-top) {
-    color: var(--link-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
-    background: var(--main-color);
-    box-shadow: 0px 16px 30px rgba(50, 175, 100, 0.15);
-    border-radius: 35px;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    padding-left: var(--large-padding);
-    padding-right: var(--large-padding);
-    text-decoration: none;
-    opacity: 1;
-    margin-top: var(--medium-margin);
+@mixin linkHelpMe($color, $background, $box-shadow, $margin-top) {
+  color: var(--link-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  background: var(--main-color);
+  box-shadow: 0px 16px 30px rgba(50, 175, 100, 0.15);
+  border-radius: 35px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: var(--large-padding);
+  padding-right: var(--large-padding);
+  text-decoration: none;
+  margin-top: var(--medium-margin);
 
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-      opacity: 0.9;
-    }
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background: linear-gradient(
+      0deg,
+      rgba(77, 185, 107, 1) 0%,
+      rgba(13, 78, 21, 1) 100%
+    );
+    color: white;
+  }
 }
